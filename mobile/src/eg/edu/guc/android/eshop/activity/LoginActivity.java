@@ -56,7 +56,8 @@ public class LoginActivity extends BaseActivity {
 							public void success(User user, Response response) {
 								setCurrentUser(user);
 								stopProgress();
-								// TODO: Start the referrer activity
+								Intent myIntent = new Intent(LoginActivity.this, ProductsActivity.class);
+								startActivity(myIntent);
 							}
 
 							@Override
